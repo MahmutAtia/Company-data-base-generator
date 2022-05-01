@@ -10,12 +10,15 @@ def run():
     num_emp = st.sidebar.slider("Enter how many employees in your Company")
     table1 = employees(num_emp)
     st.write(table1.emp_table())
-    st.download_button("Download your employee table", data = table1.csv())
+    emp_df = table1.csv()
+    st.download_button("Download your employee table", data = emp_df )
     num_sales = st.sidebar.slider("Enter how many sales in your Company")
     table2 = sales(num_sales)
     st.write(table2.sales_table())
-    st.download_button("Download your sales table", data = table2.csv())
+    sales_df = table2.csv()
+    st.download_button("Download your sales table", data =sales_df )
 
 
 if __name__ == "__main__":
     run()
+x
