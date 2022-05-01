@@ -22,4 +22,7 @@ class employees:
             last_name = names.get_last_name()
             employees.df.loc[len(employees.df.index)] = [ID, frist_name, last_name, Gender] #insert a row inside the dataframe
         return employees.df
+    def csv(self):
+        df_csv = employees.df.to_csv(index= False)
+        return df_csv
 

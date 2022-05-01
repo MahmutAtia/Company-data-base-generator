@@ -23,4 +23,6 @@ class sales:
             sales.df2.loc[len(sales.df2.index)] = [id, numberofsales, price, profit, cog, product]
         return sales.df2
 
-
+    def csv(self):
+        df_csv = sales.df2.to_csv(index=False)
+        return df_csv
